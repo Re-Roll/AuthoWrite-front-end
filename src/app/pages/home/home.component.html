@@ -1,5 +1,14 @@
 <html>
-    <div class="container">
+    <div class="circle-container" (mousemove)="onMouseMove($event)">
+        <div
+        *ngFor="let circle of circles"
+        class="circle"
+        [style.width.px]="circle.size"
+        [style.height.px]="circle.size"
+        [style.transform]="'translate(-50%, -50%) translate(' + circle.x + 'px, ' + circle.y + 'px)'"
+        ></div>
+
+        <div class="container">
             <ngx-typed-js
             [strings]="['AuthoWrite']"
             [loop]="false"
@@ -10,9 +19,10 @@
             </ngx-typed-js>
             <p class ="intro">Authorship similarity made easy </p>
             <!--<a class="learn-more" routerLink="about"> Learn More...</a>-->
-        <div class="button-div">
-            <a class = "button button-left" routerLink="login">Sign Up / Login</a>
-            <a class = "button button-right" routerLink="compare">Continue as Guest</a>
+            <div class="button-div">
+                <a class = "button button-left" routerLink="login">Sign Up / Login</a>
+                <a class = "button button-right" routerLink="compare">Continue as Guest</a>
+            </div>
         </div>
-    </div> 
+    </div>
 </html>
