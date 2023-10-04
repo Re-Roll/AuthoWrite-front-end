@@ -35,7 +35,7 @@ export class HomeComponent {
         this.circles.push({
           size: this.min_circle_size,
           x: (i * this.max_circle_size) + (this.max_circle_size / 2),
-          y: (j * this.max_circle_size),
+          y: (j * this.max_circle_size) + (this.max_circle_size / 2),
         });
       }
     }
