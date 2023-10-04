@@ -1,0 +1,116 @@
+html {
+    background-color: #163169;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: inline-flex;
+    flex-direction: column;
+    padding-bottom: 35px;
+    position: relative;
+    margin: 2em auto;
+    background-color: #274991;
+    border-radius: 10px;
+}
+.container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-width: 0 30px 30px 0;
+    border-style: solid;
+    border-color: #3059b1 #163169;
+    display: block;
+    width: 0;
+    -webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 3px 3px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+    box-shadow: -2px 3px 3px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.button {
+    color: #ffffff;
+    background-color: rgba(224, 224, 224, 0.5);
+    width: 200px;
+    float: center;
+    font-size: 100%;
+    font-weight:550;
+    padding: 10px 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    /*
+    margin-bottom: 0;
+    resize: auto;
+    */
+}
+
+.button:hover {
+    background-color: rgba(224, 224, 224, 0.88);
+    color:#163169;
+    transition: transform .3s;
+    transform: scale(1.035);
+    font-weight: bold;
+}
+
+.button-div {
+    width: 40%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    margin-top: 2%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.heading {
+    text-align: center;
+    font-size: 500%;
+    color: white;
+    padding-top: 10%;
+    padding-bottom: 2%;
+    flex-shrink: 2;
+    font-weight: 700;
+}
+
+.intro {
+    text-align: center;
+    color: white;
+    font-size: 180%;
+    font-style: italic;
+}
+
+.typing {
+    text-align: center;
+    font-size: 500%;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 2%;
+    flex-shrink: 2;
+    font-weight: 700;
+}
+/*.learn-more {
+    text-align: center;
+    color: white;
+    background-color: #163169;
+    font-size: 140%;
+    margin-top: 1%;
+    float:left;
+    text-decoration: wavy;
+}
+
+.learn-more:hover {
+    font-weight: bold;
+
+}*/
