@@ -1,7 +1,9 @@
-<div>
-    <h1>How to use this website</h1>
-</div>
-
-<div> 
-    <body> Text here </body>
-</div>
+<div class="circle-container" (mousemove)="onMouseMove($event)">
+    <div
+      *ngFor="let circle of circles"
+      class="circle"
+      [style.width.px]="circle.size"
+      [style.height.px]="circle.size"
+      [style.transform]="'translate(-50%, -50%) translate(' + circle.x + 'px, ' + circle.y + 'px)'"
+    ></div>
+  </div>

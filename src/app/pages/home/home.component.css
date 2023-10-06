@@ -1,20 +1,23 @@
 html {
     background-color: #163169;
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     margin: 0;
 }
 
 .container {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     padding-bottom: 35px;
-    position: relative;
     margin: 2em auto;
     background-color: #274991;
     border-radius: 10px;
+    height: 300px;
+    width: 1200px;
+    /*position in the center responsively*/
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
 }
 .container:before {
     content: "";
@@ -100,6 +103,19 @@ html {
     flex-shrink: 2;
     font-weight: 700;
 }
+
+.circle-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.circle {
+    background-color: #274786; /* Circle color */
+    border-radius: 50%;
+    transition: transform 0.2s ease-in-out;
+    position: absolute;
+}
+
 /*.learn-more {
     text-align: center;
     color: white;
