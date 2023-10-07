@@ -16,6 +16,7 @@ import { FileCardComponent } from './file-card/file-card.component';
 import { StatBarComponent } from './stat-bar/stat-bar.component';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { HelpComponent } from './pages/help/help.component';
+import { ProfilesComponent } from './pages/profiles/profiles.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HelpComponent } from './pages/help/help.component';
     CompareComponent,
     FileCardComponent,
     StatBarComponent,
-    HelpComponent
+    HelpComponent,
+    ProfilesComponent
   ],
   imports: [
     BrowserModule,
