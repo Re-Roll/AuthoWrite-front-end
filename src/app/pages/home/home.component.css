@@ -13,8 +13,6 @@ html {
     background-color: #274991;
     border-radius: 10px;
     height: 300px;
-    width: 1200px;
-    /*position in the center responsively*/
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
     margin: auto;
@@ -106,7 +104,7 @@ html {
 
 .circle-container {
     display: flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
 }
 
 .circle {
