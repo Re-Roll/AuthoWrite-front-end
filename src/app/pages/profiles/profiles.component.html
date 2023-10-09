@@ -1,0 +1,64 @@
+<html>
+    <div class="heading-div">
+        <h1 class="heading">Profiles</h1>
+    </div>
+
+    <div class="page-div">
+        <div class="left-column">
+            <p class="heading">Profiles</p>
+            <button class="add-button" (click)="createProfile()">Create Profile</button>
+            <div class="profiles-div">
+              <button class="profile-card">Profile 1</button>
+              <button class="profile-card">Profile 2</button>
+              <button class="profile-card">Profile 3</button>
+              <button class="profile-card">Profile 4</button>
+            </div>
+
+            
+        </div>
+    
+        <div class="right-column">
+            <p class="heading">Texts</p>
+            <h1>[Profile Name]</h1>
+                <div class="upload">
+                    <div class="upload-div">
+                      <label class="upload-label"for="knownfile">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <path d="M8.71,7.71,11,5.41V15a1,1,0,0,0,2,0V5.41l2.29,2.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42l-4-4a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21l-4,4A1,1,0,1,0,8.71,7.71ZM21,12a1,1,0,0,0-1,1v6a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V13a1,1,0,0,0-2,0v6a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V13A1,1,0,0,0,21,12Z" 
+                          fill="#212529"></path>
+                        </svg>
+                        <p>Add Known Text(s) to Profile</p>
+                      </label>
+                      <input
+                        id="knownfile"
+                        type="file"
+                        (change)="onMultipleFileChange($event)"
+                        accept=".txt, .pdf, .docx"
+                        multiple
+                      />
+                    </div>
+            
+                    <div *ngFor="let text of knownTexts; let i = index">
+                      <app-file-card [file]="text" [name]="'known'+i" [index]="i" (delete)="onDeleteKnownText($event)"></app-file-card>
+                    </div>
+            
+                    <div *ngFor="let file of knownFiles; let i = index">
+                      <app-file-card [file]="file" [name]="file.name" [index]="i" (delete)="onDeleteKnownFile($event)"></app-file-card>
+                    </div>
+                  </div>
+        </div>
+    
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</html>

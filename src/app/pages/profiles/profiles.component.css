@@ -1,0 +1,116 @@
+.heading {
+    text-align: center;
+    font-size: xx-large;
+    align-self: center;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.heading-div {
+    display: flex;
+
+}
+
+.page-div {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+}
+
+.profiles-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+  height: 500%;
+}
+.upload {
+    margin: auto;
+}
+
+.upload-div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-left: 1%;
+    padding-top: 1%;
+    flex-direction: row;
+    margin: auto;
+  }
+  
+  .upload-div > input {
+    display: none;
+  }
+  
+  .upload-label {
+    display: flex;
+    width: 300px;
+    height: 50px;
+    font-size: medium;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .upload-label:hover {
+    width: 300px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .upload-label > p {
+    padding-top: 5%;
+  }
+  
+  .upload-label > svg {
+    width: 15%;
+  }
+
+  .add-button {
+    width: 220px;
+    text-decoration:none;
+    background-color:var(--primary-color);
+    border: none;
+    color:white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    margin: auto;
+    box-shadow: 0 2px 25px var(--shadow-color);
+    border-radius: 15px;
+    margin-bottom: 2%;
+    margin-top: 0;
+
+  }
+  
+  .add-button:hover {
+    background-color:var(--tertiary-color);
+    color:#fff;
+    transition: transform .3s;
+    transform: scale(1.01);
+  }
+
+  .profile-card {
+    margin: auto;
+    font-size: 20px;
+    padding: 5px;
+    width: 200px;
+    border-style: groove;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
