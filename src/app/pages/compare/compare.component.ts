@@ -55,7 +55,7 @@ export class CompareComponent {
   }
 
   onDeleteKnownFile(index: number): void {
-    var knownFilesArray = Array.from(this.knownFiles);
+    const knownFilesArray = Array.from(this.knownFiles);
     knownFilesArray.splice(index, 1);
     this.knownFiles = knownFilesArray;
   }
@@ -65,13 +65,13 @@ export class CompareComponent {
   }
 
   onDeleteKnownText(index: number): void {
-    var knownTextsArray = Array.from(this.knownTexts);
+    const knownTextsArray = Array.from(this.knownTexts);
     knownTextsArray.splice(index, 1);
     this.knownTexts = knownTextsArray;
   }
 
   addKnownText(): void {
-    var knownText:string = (<HTMLTextAreaElement>(
+    const knownText:string = (<HTMLTextAreaElement>(
       document.getElementById("knownText")
     )).value;
 
@@ -83,7 +83,7 @@ export class CompareComponent {
 
   sendPostRequest() {
     const URL = "http://3.26.213.177:5000/compare";
-    var inputData = new FormData();
+    const inputData = new FormData();
 
     // append files to inputData
     if (this.unknownFile) {
@@ -99,10 +99,10 @@ export class CompareComponent {
     }
 
     // get inputs from text areas into userInputs variables
-    var knownText = (<HTMLTextAreaElement>(
+    const knownText = (<HTMLTextAreaElement>(
       document.getElementById("knownText")
     )).value;
-    var unknownText = (<HTMLTextAreaElement>(
+    const unknownText = (<HTMLTextAreaElement>(
       document.getElementById("unknownText")
     )).value;
 
@@ -119,7 +119,7 @@ export class CompareComponent {
           this.showResults();
         },
         (error) => {
-          var error_message = error['error']['message'];
+          const error_message = error['error']['message'];
           // create popup box with error message
           alert(error_message);
         }
@@ -127,7 +127,7 @@ export class CompareComponent {
   }
 
   showResults() {
-    var results = (<HTMLDivElement> (document.getElementById("resultsDiv")))
+    const results = (<HTMLDivElement> (document.getElementById("resultsDiv")))
     results.style.display = "block";
     results.scrollIntoView();
     document.documentElement.style.setProperty("--bar-value",  String((this.result/100) * 180) + "deg");

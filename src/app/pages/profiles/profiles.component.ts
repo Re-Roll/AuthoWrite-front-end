@@ -26,7 +26,7 @@ export class ProfilesComponent {
   }
 
   onDeleteKnownFile(index: number): void {
-    var knownFilesArray = Array.from(this.knownFiles);
+    const knownFilesArray = Array.from(this.knownFiles);
     knownFilesArray.splice(index, 1);
     this.knownFiles = knownFilesArray;
   }
@@ -36,13 +36,13 @@ export class ProfilesComponent {
   }
 
   onDeleteKnownText(index: number): void {
-    var knownTextsArray = Array.from(this.knownTexts);
+    const knownTextsArray = Array.from(this.knownTexts);
     knownTextsArray.splice(index, 1);
     this.knownTexts = knownTextsArray;
   }
 
   addKnownText(): void {
-    var knownText:string = (<HTMLTextAreaElement>(
+    const knownText:string = (<HTMLTextAreaElement>(
       document.getElementById("knownText")
     )).value;
 
@@ -52,7 +52,4 @@ export class ProfilesComponent {
     }
   }
 
-  createProfile() {
-    
-  }
 }

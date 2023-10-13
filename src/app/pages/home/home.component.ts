@@ -5,8 +5,8 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  max_circle_size: number = 90;
-  min_circle_size: number = 10;
+  max_circle_size = 90;
+  min_circle_size = 10;
   circles: { size: number; x: number; y: number }[] = [];
 
   constructor() {
