@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,12 +11,34 @@ import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CompareComponent } from './pages/compare/compare.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { FileCardComponent } from './file-card/file-card.component';
 import { StatBarComponent } from './stat-bar/stat-bar.component';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { HelpComponent } from './pages/help/help.component';
 import { ProfilesComponent } from './pages/profiles/profiles.component';
+import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing'
+import { TestBed } from '@angular/core/testing';
+
+/*
+describe('HttpClient testing', () => {
+  let httpClient: HttpClient;
+  let httpTestingController: HttpTestingController;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [ HttpClientTestingModule ]
+    });
+
+    // Inject the http service and test controller for each test
+    httpClient = TestBed.get(HttpClient);
+    httpTestingController = TestBed.get(HttpTestingController);
+  });
+
+  it('works', () => {
+  });
+});
+*/
 
 @NgModule({
   declarations: [
@@ -41,7 +63,8 @@ import { ProfilesComponent } from './pages/profiles/profiles.component';
     HttpClientModule,
     NgxTypedJsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [HttpClientModule],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
