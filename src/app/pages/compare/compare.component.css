@@ -316,6 +316,15 @@ body{
   color: var(--bar-colour);
 }
 
+.result-text {
+  max-width: 450px;
+  font-size: 26px;
+  font-weight: 500;
+  padding-top: 50px;
+  color: var(--bar-colour);
+  text-align: center;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;

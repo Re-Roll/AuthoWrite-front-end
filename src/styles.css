@@ -29,3 +29,30 @@ h1
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Override Bootstrap tooltip styles */
+.tooltip {
+    opacity: 1 !important;
+}
+.tooltip-inner {
+    background-color: var(--secondary-color); /* Change background color */
+    color: black; /* Change text color */
+    font-size: 14px; /* Change font size */
+    padding: 20px; /* Adjust padding */
+    border-radius: 10%; /* Adjust border radius */
+    box-shadow: 0 0 5px var(--shadow-color); /* Add a small shadow */
+    line-height: 1.5; /* Adjust line height */
+}
+
+/*Navbar toggler custom colour*/
+.navbar-dark .navbar-toggler-icon {
+    background-image: url(
+        "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' \
+        viewBox='0 0 30 30'%3e%3cpath \
+        stroke='rgba%28255, 255, 255%29' \
+        stroke-linecap='round' \
+        stroke-miterlimit='10' \
+        stroke-width='2' \
+        d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"
+    );
+}

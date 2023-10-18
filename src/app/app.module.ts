@@ -14,6 +14,7 @@ import { FileCardComponent } from './file-card/file-card.component';
 import { StatBarComponent } from './stat-bar/stat-bar.component';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { HelpComponent } from './pages/help/help.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { HelpComponent } from './pages/help/help.component';
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgxTypedJsModule
+    NgxTypedJsModule,
+    NgbModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

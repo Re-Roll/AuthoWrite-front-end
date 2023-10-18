@@ -143,6 +143,7 @@ To add more texts this way, click the button in the bottom right corner of this 
             
           </div>
         </div>
+        <h1 class="result-text">{{resultText}}</h1>
       </div>
       
     </div>
@@ -161,6 +162,7 @@ To add more texts this way, click the button in the bottom right corner of this 
             [stat_known]="stat[0]"
             [stat_unknown]="stat[1]"
             [stat_prop]="stat[2]"
+            [tooltipContent]="STAT_EXPLANATIONS[i]"
           ></app-stat-bar>
         </div>
       </div>
