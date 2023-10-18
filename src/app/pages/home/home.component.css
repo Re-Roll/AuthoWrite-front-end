@@ -14,7 +14,6 @@ html {
     border-radius: 10px;
     height: 300px;
     max-width: 1200px;
-    /*position in the center responsively*/
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
     margin: auto;
@@ -52,10 +51,6 @@ html {
     text-align: center;
     margin: 0 auto;
     margin-bottom: 10px;
-    /*
-    margin-bottom: 0;
-    resize: auto;
-    */
 }
 
 .button:hover {
@@ -106,7 +101,6 @@ html {
 
 .circle-container {
     display: flex;
-    /*flex-wrap: wrap;*/
 }
 
 .circle {
@@ -115,18 +109,3 @@ html {
     transition: transform 0.2s ease-in-out;
     position: absolute;
 }
-
-/*.learn-more {
-    text-align: center;
-    color: white;
-    background-color: #163169;
-    font-size: 140%;
-    margin-top: 1%;
-    float:left;
-    text-decoration: wavy;
-}
-
-.learn-more:hover {
-    font-weight: bold;
-
-}*/

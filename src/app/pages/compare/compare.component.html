@@ -126,7 +126,6 @@ To add more texts this way, click the button in the bottom right corner of this 
     <div class="results-col">
       <h1 class="results-title">Similarity</h1>
       <div class="bar-div">
-        <div class="filler">
         <div class="circle-wrap">
           <div class="circle">
             
@@ -145,15 +144,16 @@ To add more texts this way, click the button in the bottom right corner of this 
           </div>
         </div>
       </div>
-    <div class="filler">
-    </div>
-      </div>
       
     </div>
 
     <div class="results-col">
       <h1 class="results-title">Explanation</h1>
-      <div class="bar-div">
+      <div class="headers">
+        <h2 class="htitle utitle">UNKNOWN TEXT</h2>
+        <h2 class="htitle">KNOWN TEXT(S)</h2>
+      </div>
+      <div>
         <div class="stat-bars">
           <app-stat-bar
             *ngFor="let stat of stats; let i = index"
