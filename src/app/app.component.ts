@@ -8,9 +8,9 @@ import { Router, NavigationStart } from "@angular/router";
 })
 export class AppComponent {
   title = "AuthoWrite";
-  showHead: boolean = false;
+  showHead = false;
 
-  ngOnInit() {}
+  // ngOnInit() {}
 
   constructor(private router: Router) {
     // on route change to '/login', set the variable showHead to false

@@ -9,7 +9,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { CompareComponent } from './pages/compare/compare.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { FileCardComponent } from './file-card/file-card.component';
 import { StatBarComponent } from './stat-bar/stat-bar.component';
 import { NgxTypedJsModule } from 'ngx-typed-js';
@@ -35,7 +35,7 @@ import { HelpComponent } from './pages/help/help.component';
     HttpClientModule,
     NgxTypedJsModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
