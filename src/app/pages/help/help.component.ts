@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./help.component.css']
 })
 export class HelpComponent {
-  max_circle_size: number = 100;
-  min_circle_size: number = 20;
+  max_circle_size = 100;
+  min_circle_size = 20;
   circles: { size: number; x: number; y: number }[] = [];
 
   constructor() {
