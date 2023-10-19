@@ -517,7 +517,7 @@ body:hover {
   border-radius: 4px;
   overflow: hidden;
   padding-bottom: 20px;
-  background-color: #fff;
+  background-color: var(--off-white);
     -ms-flex-item-align: center;
     align-self: center;
     box-shadow: 0 12px 25px 0 rgba(199,175,189,.25);
