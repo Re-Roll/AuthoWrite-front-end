@@ -51,7 +51,7 @@ export class CompareComponent {
   unknownFile: File[] = [];
   knownFiles: File[] = [];
   result!: number | 0;
-  resultText: string = "";
+  resultText = "";
   stats: any;
 
   constructor(private http: HttpClient) {}
