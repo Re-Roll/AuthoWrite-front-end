@@ -10,6 +10,7 @@ export class StatBarComponent {
   @Input() stat_known: number | undefined;
   @Input() stat_unknown: number | undefined;
   @Input() stat_prop!: number;
+  @Input() tooltipContent!: string;
 
   // when component is create make stat_known and stat_unknown 2 decimal places
   ngOnInit() {
