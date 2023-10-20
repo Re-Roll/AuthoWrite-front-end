@@ -58,7 +58,7 @@ export class CompareComponent {
 
   onSingleFileChange(event: any) {
     for (const file of event.target.files) {
-      this.unknownFile.push(file);
+      this.unknownFile = [file];
     }
   }
 
