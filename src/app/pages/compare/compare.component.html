@@ -1,3 +1,32 @@
+<div class="section">
+  <input class="modal-btn" type="checkbox" id="modal-btn" name="modal-btn"/>
+  <label for="modal-btn"><i class="uil uil-expand-arrows"></i></label> 		
+  <div class="modal">		
+      <div class="modal-wrap">	
+        <img src="tut_1.jpg" alt="">	
+        <p>
+          1. First add your known text(s)
+        </p>	          		
+      </div>	
+      <div class="modal-wrap">
+        <img src="tut_2.jpg" alt="">
+        <p>
+          2. Next add your unknown text
+        </p>
+      </div>	
+      <div class="modal-wrap">
+        <img src="tut_3.jpg" alt="">
+        <p>
+          3. Click Compare
+        </p>
+      </div>	   
+      <div class="modal-wrap">
+        <p>
+          4. See your result
+        </p>
+      </div>       		
+  </div>	
+</div>
 <div class="compare">
   <label class="heading" for="field1">Welcome to AuthoWrite</label>
   <div class="instructions">
@@ -97,7 +126,6 @@ To add more texts this way, click the button in the bottom right corner of this 
     <div class="results-col">
       <h1 class="results-title">Similarity</h1>
       <div class="bar-div">
-        <div class="filler">
         <div class="circle-wrap">
           <div class="circle">
             
@@ -115,16 +143,18 @@ To add more texts this way, click the button in the bottom right corner of this 
             
           </div>
         </div>
-      </div>
-    <div class="filler">
-    </div>
+        <h1 class="result-text">{{resultText}}</h1>
       </div>
       
     </div>
 
     <div class="results-col">
       <h1 class="results-title">Explanation</h1>
-      <div class="bar-div">
+      <div class="headers">
+        <h2 class="htitle utitle">UNKNOWN TEXT</h2>
+        <h2 class="htitle">KNOWN TEXT(S)</h2>
+      </div>
+      <div>
         <div class="stat-bars">
           <app-stat-bar
             *ngFor="let stat of stats; let i = index"
@@ -132,9 +162,11 @@ To add more texts this way, click the button in the bottom right corner of this 
             [stat_known]="stat[0]"
             [stat_unknown]="stat[1]"
             [stat_prop]="stat[2]"
+            [tooltipContent]="STAT_EXPLANATIONS[i]"
           ></app-stat-bar>
         </div>
       </div>
     </div>
   </div>
 </div>
+

@@ -1,8 +1,10 @@
-# Test Website
+# AuthoWrite Front-End
+
+*Created for the COMP30022 IT Project subject*
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
 
-- [Test Website](#test-website)
+- [AuthoWrite Front-End](#authowrite-front-end)
     - [Members](#members)
   - [Description](#description)
   - [Key Algorithms](#key-algorithms)

@@ -33,10 +33,25 @@ export class CompareComponent {
     "Word Count",
   ];
 
+  STAT_EXPLANATIONS: string[] = [
+    `A score on how similar the distances between the words in the unknown text are to the distances of the known texts. 
+    The closer the score is to 100, the more similar the words in the unknown text are to the words in the known texts.`,
+    `The percentage of punctuations used per word compared between the unknown text and
+    the average of the known texts`,
+    `The average number of words in a sentence of the unknown text compared to the average of the known texts`,
+    `Rare words are words used 2 or less times in a text. This stat is
+    The percentage of rare words used in the unknown text compared to the average of the known texts`,
+    `Long words are words with more than 6 characters. This stat is
+    The percentage of long words used in the unknown text compared to the average of the known texts`,
+    `Type-Token Ratio is the ratio of unique words in a text compared to the total number of words in the text.`,
+    `The total number of words in the unknown text compared to the average total of the known texts`,
+  ];
+
   knownTexts: string[] = [];
   unknownFile: File[] = [];
   knownFiles: File[] = [];
   result!: number | 0;
+  resultText = "";
   stats: any;
 
   constructor(private http: HttpClient) {}
@@ -55,7 +70,7 @@ export class CompareComponent {
   }
 
   onDeleteKnownFile(index: number): void {
-    var knownFilesArray = Array.from(this.knownFiles);
+    const knownFilesArray = Array.from(this.knownFiles);
     knownFilesArray.splice(index, 1);
     this.knownFiles = knownFilesArray;
   }
@@ -65,13 +80,13 @@ export class CompareComponent {
   }
 
   onDeleteKnownText(index: number): void {
-    var knownTextsArray = Array.from(this.knownTexts);
+    const knownTextsArray = Array.from(this.knownTexts);
     knownTextsArray.splice(index, 1);
     this.knownTexts = knownTextsArray;
   }
 
   addKnownText(): void {
-    var knownText:string = (<HTMLTextAreaElement>(
+    const knownText:string = (<HTMLTextAreaElement>(
       document.getElementById("knownText")
     )).value;
 
@@ -83,7 +98,7 @@ export class CompareComponent {
 
   sendPostRequest() {
     const URL = "http://3.26.213.177:5000/compare";
-    var inputData = new FormData();
+    const inputData = new FormData();
 
     // append files to inputData
     if (this.unknownFile) {
@@ -99,10 +114,10 @@ export class CompareComponent {
     }
 
     // get inputs from text areas into userInputs variables
-    var knownText = (<HTMLTextAreaElement>(
+    const knownText = (<HTMLTextAreaElement>(
       document.getElementById("knownText")
     )).value;
-    var unknownText = (<HTMLTextAreaElement>(
+    const unknownText = (<HTMLTextAreaElement>(
       document.getElementById("unknownText")
     )).value;
 
@@ -119,7 +134,7 @@ export class CompareComponent {
           this.showResults();
         },
         (error) => {
-          var error_message = error['error']['message'];
+          const error_message = error['error']['message'];
           // create popup box with error message
           alert(error_message);
         }
@@ -127,7 +142,7 @@ export class CompareComponent {
   }
 
   showResults() {
-    var results = (<HTMLDivElement> (document.getElementById("resultsDiv")))
+    const results = (<HTMLDivElement> (document.getElementById("resultsDiv")))
     results.style.display = "block";
     results.scrollIntoView();
     document.documentElement.style.setProperty("--bar-value",  String((this.result/100) * 180) + "deg");
@@ -137,13 +152,15 @@ export class CompareComponent {
   setBarColour(result: number) {
     if(result >= 70) {
       document.documentElement.style.setProperty("--bar-colour", "green");
+      this.resultText = "The unknown text is very similar to the known texts in its writing style";
     }
     else if((result < 70) && (result > 40)) {
       document.documentElement.style.setProperty("--bar-colour", "orange");
+      this.resultText = "The unknown text is somewhat similar to the known texts in its writing style";
     }
     else {
       document.documentElement.style.setProperty("--bar-colour", "red");
-      
+      this.resultText = "The unknown text is not similar to the known texts in its writing style";
     }
   }
 }

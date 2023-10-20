@@ -13,6 +13,7 @@ html {
     background-color: #274991;
     border-radius: 10px;
     height: 300px;
+    max-width: 1200px;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
     margin: auto;
@@ -40,20 +41,17 @@ html {
 .button {
     color: #ffffff;
     background-color: rgba(224, 224, 224, 0.5);
-    width: 200px;
+    width: 400px;
+    height: 75px;
     float: center;
-    font-size: 100%;
+    font-size: 24px;
     font-weight:550;
-    padding: 10px 12px;
+    padding: 25px 12px;
     border-radius: 12px;
     text-decoration: none;
     text-align: center;
     margin: 0 auto;
     margin-bottom: 10px;
-    /*
-    margin-bottom: 0;
-    resize: auto;
-    */
 }
 
 .button:hover {
@@ -69,7 +67,7 @@ html {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
     margin-top: 2%;
     flex-direction: row;
     justify-content: center;
@@ -104,7 +102,6 @@ html {
 
 .circle-container {
     display: flex;
-    /*flex-wrap: wrap;*/
 }
 
 .circle {
@@ -113,18 +110,3 @@ html {
     transition: transform 0.2s ease-in-out;
     position: absolute;
 }
-
-/*.learn-more {
-    text-align: center;
-    color: white;
-    background-color: #163169;
-    font-size: 140%;
-    margin-top: 1%;
-    float:left;
-    text-decoration: wavy;
-}
-
-.learn-more:hover {
-    font-weight: bold;
-
-}*/
