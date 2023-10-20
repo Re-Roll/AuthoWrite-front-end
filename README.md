@@ -56,18 +56,20 @@ subgraph Front-End
     end
     Compare --> Stat-Bar
     Nav-Bar --> Main-Pages
+    Main-Pages --> Nav-Bar
 end
 Back-End
 Compare --> Back-End
 ```
 **Compare** : Page where `sendPostRequest()` method is called which creates a **multi-part form** outputted to the back-end. 
+**Nav-Bar** : component that adds a navigation bar to every page within **Main-Pages** EXCEPT **Home** but includes a link to every page within **Main-Pages**
 
 <u>**Form Model**</u>
 
 - **known_texts** : `List` of `string` variables for inputted known texts
 - **unknown_text** : `string` variable of inputted unknown text
 - **known_files** : `List` of raw `file` variables for uploaded known files
-- **unknown_text** : raw `file` variable for uploaded unknown text
+- **unknown_file** : raw `file` variable for uploaded unknown file
 ## How To Use
 
 The website can be accessed using the link: [AuthoWrite](http://authowrite-front-end-bucket.s3-website-ap-southeast-2.amazonaws.com/)
