@@ -10,10 +10,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   - [Key Algorithms](#key-algorithms)
     - [Methods](#methods)
     - [Events](#events)
-  - [Application Layers](#application-layers)
+  - [Key Classes \& Application Layers](#key-classes--application-layers)
   - [How To Use](#how-to-use)
   - [Installation Method](#installation-method)
   - [Deployment Method](#deployment-method)
+  - [Release History](#release-history)
 
 ### <u>Members</u>
 
@@ -38,15 +39,35 @@ The front end repository for the AuthoWrite website created for the client [Edua
 - `onDeleteKnownText()` : deletes a known text by index
 - `addKnownText()` : adds a known text
 
-## Application Layers
+## Key Classes & Application Layers
 ```mermaid
-  graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
-```
+graph TD
+subgraph Front-End
+    Nav-Bar
+    Stat-Bar
+    subgraph Main-Pages
+        Home
+        Compare
+        About
+        Help
+        Contact
 
+        Home --> Compare;
+    end
+    Compare --> Stat-Bar
+    Nav-Bar --> Main-Pages
+end
+Back-End
+Compare --> Back-End
+```
+**Compare** : Page where `sendPostRequest()` method is called which creates a **multi-part form** outputted to the back-end. 
+
+<u>**Form Model**</u>
+
+- **known_texts** : `List` of `string` variables for inputted known texts
+- **unknown_text** : `string` variable of inputted unknown text
+- **known_files** : `List` of raw `file` variables for uploaded known files
+- **unknown_text** : raw `file` variable for uploaded unknown text
 ## How To Use
 
 The website can be accessed using the link: [AuthoWrite](http://authowrite-front-end-bucket.s3-website-ap-southeast-2.amazonaws.com/)
@@ -56,7 +77,7 @@ Which comes with a tutorial on how to use the app by clicking the **(?)** button
 For anyone trying to run a clone of the website, please install Angular and node.js to run the website properly. To ensure the processing is functional, make sure the deployment of the [Back-End](https://github.com/Re-Roll/AuthoWrite-back-end) is publically available, where the [AuthoWrite Back-End Documentation](http://3.26.213.177:5000/docs) should be available to view.  
 
 ## Installation Method
-1. Copy the repository
+1. Clone the repository
 2. Make sure to have [NodeJS](https://nodejs.org/en) installed
 3. Open up the terminal and type the commands:
 
@@ -66,6 +87,8 @@ npm install -g @angular/cli
 ng serve
 ```
 Now you will be able to access the website locally, where any changes will automatically update the locally running site. 
+
+*NOTE: using `ng serve` will have images not functioning as the image file location has been set to account for when the website is hosted, to check images are working correctly, just change image file directory to the asset folder*
 
 ## Deployment Method
 
@@ -94,3 +117,19 @@ The front end was deployed using **CodePipeline** which was connected with the G
         base-directory: 'dist*'
 
 The final built Angular app is then pipelined to an **S3 Bucket** which publically hosts the website.
+
+## Release History
+
+*The release history doesn't align with actual releases as we didn't know they had to be formally included as well as our repositories being split*
+
+*You can find the original repository using the link: [Original Repository](https://github.com/SaaiqAhmed/reroll)*
+
+- 1.2.0 - added additional statistics
+- 1.1.0 - added ability of uploading files
+- 1.0.2 - Visual UI update
+- 1.0.1 - Improved text input to be properly functional
+- 1.0.0 - Added back-end connection
+- 0.1.1 - Added non-functional results page
+- 0.1.0 - Fixed colour scheme
+- 0.0.2 - Added textbox styling
+- 0.0.1 - Created template landing page
