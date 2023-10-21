@@ -76,7 +76,7 @@ The website can be accessed using the link: [AuthoWrite](http://authowrite-front
 
 Which comes with a tutorial on how to use the app by clicking the **(?)** button on the bottom right when you enter the site's compare page.
 
-For anyone trying to run a clone of the website, please install Angular and node.js to run the website properly. To ensure the processing is functional, make sure the deployment of the [Back-End](https://github.com/Re-Roll/AuthoWrite-back-end) is publically available, where the [AuthoWrite Back-End Documentation](http://3.26.213.177:5000/docs) should be available to view.  
+For anyone trying to run a clone of the website, please install Angular and node.js to run the website properly. To ensure the processing is functional, make sure the deployment of the [Back-End](https://github.com/Re-Roll/AuthoWrite-back-end) is publically available, where the [AuthoWrite Back-End Documentation](http://3.27.45.50:5000/docs) should be available to view.  
 
 ## Installation Method
 1. Clone the repository

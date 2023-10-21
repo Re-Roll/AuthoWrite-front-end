@@ -97,7 +97,7 @@ export class CompareComponent {
   }
 
   sendPostRequest() {
-    const URL = "http://3.26.213.177:5000/compare";
+    const URL = "http://3.27.45.50:5000/compare";
     const inputData = new FormData();
 
     // append files to inputData
